@@ -2,49 +2,44 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>de.matez.camunda</groupId>
+	<groupId>com.finture</groupId>
 	<artifactId>cockpit-plugin-heatmap</artifactId>
-	<version>0.9.2-SNAPSHOT</version>
+	<version>0.7.2-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>Camunda Cockpit Plugin: Heatmap</name>
-	<description>This is a simple camunda cockpit plugin that showcases how you can visualize some simple historic statistics on the process definition view by using a heatmap.</description>
-	<url>https://github.com/mwiede/camunda-cockpit-plugins/tree/master/cockpit-plugin-heatmap</url>
+	<name>Flowee BPMS Cockpit Plugin: Heatmap</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<camunda.version>7.2.0</camunda.version>
+		<flowee-bpms.version>0.7.2-SNAPSHOT</flowee-bpms.version>
 
 		<!-- This property must be present for the pom.xml to be recognized as 
 			a plugin -->
 
-		<camunda.plugin.category>Monitoring</camunda.plugin.category>
+		<flowee-bpms.plugin.category>Monitoring</flowee-bpms.plugin.category>
 
-		<camunda.plugin.screenshot>Screenshot2.png</camunda.plugin.screenshot>
-		<camunda.plugin.screenshot.1>Screenshot1.png</camunda.plugin.screenshot.1>
-		<camunda.plugin.testedOnVersion>7.2.0</camunda.plugin.testedOnVersion>
-		<!-- <camunda.plugin.exampleProcessApplicationUrl>https://github.com/camunda/camunda-consulting/tree/master/one-time-examples/ige-example/ige-processApplication</camunda.plugin.exampleProcessApplicationUrl> -->
+		<flowee-bpms.plugin.screenshot>Screenshot2.png</flowee-bpms.plugin.screenshot>
+		<flowee-bpms.plugin.screenshot.1>Screenshot1.png</flowee-bpms.plugin.screenshot.1>
+		<flowee-bpms.plugin.testedOnVersion>0.7.2-SNAPSHOT</flowee-bpms.plugin.testedOnVersion>
 
-		<camunda.plugin.language>EN</camunda.plugin.language>
+		<flowee-bpms.plugin.language>EN</flowee-bpms.plugin.language>
 
 	</properties>
 
 	<dependencies>
-		
+
 		<dependency>
-			<!-- Cockpit Plugin API, needs to be provided -->
-			<groupId>org.camunda.bpm.webapp</groupId>
-			<artifactId>camunda-webapp-core</artifactId>
-			<version>${camunda.version}</version>
-			<scope>provided</scope>
+			<groupId>com.finture.bpm.webapp</groupId>
+			<artifactId>flowee-bpms-webapp</artifactId>
+			<version>0.7.2-SNAPSHOT</version>
+			<classifier>classes</classifier>
 		</dependency>
 		
 		<dependency>
 			<!-- process engine, needs to be provided -->
-			<groupId>org.camunda.bpm</groupId>
-			<artifactId>camunda-engine</artifactId>
-			<version>${camunda.version}</version>
-			<scope>provided</scope>
+			<groupId>com.finture.bpm</groupId>
+			<artifactId>flowee-bpms-engine</artifactId>
+			<version>0.7.2-SNAPSHOT</version>
 		</dependency>
 
 		<dependency>
@@ -71,23 +66,15 @@
 		</dependency>
 	</dependencies>
 
-	<repositories>
-		<repository>
-			<id>camunda-bpm-nexus</id>
-			<name>camunda-bpm-nexus</name>
-			<url>https://app.camunda.com/nexus/content/groups/public</url>
-		</repository>
-	</repositories>
-	
 	<build>
 		<finalName>${project.artifactId}</finalName>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.1</version>
+				<version>3.8.1</version>
 				<configuration>
-					<source>1.6</source>
-					<target>1.6</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 		</plugins>
