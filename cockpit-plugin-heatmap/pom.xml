@@ -11,7 +11,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<flowee-bpms.version>0.7.2-SNAPSHOT</flowee-bpms.version>
+		<flowee-bpms.version>0.7.2</flowee-bpms.version>
 
 		<!-- This property must be present for the pom.xml to be recognized as 
 			a plugin -->
@@ -20,7 +20,7 @@
 
 		<flowee-bpms.plugin.screenshot>Screenshot2.png</flowee-bpms.plugin.screenshot>
 		<flowee-bpms.plugin.screenshot.1>Screenshot1.png</flowee-bpms.plugin.screenshot.1>
-		<flowee-bpms.plugin.testedOnVersion>0.7.2-SNAPSHOT</flowee-bpms.plugin.testedOnVersion>
+		<flowee-bpms.plugin.testedOnVersion>0.7.2</flowee-bpms.plugin.testedOnVersion>
 
 		<flowee-bpms.plugin.language>EN</flowee-bpms.plugin.language>
 
@@ -31,7 +31,7 @@
 		<dependency>
 			<groupId>com.finture.bpm.webapp</groupId>
 			<artifactId>flowee-bpms-webapp</artifactId>
-			<version>0.7.2-SNAPSHOT</version>
+			<version>0.7.2</version>
 			<classifier>classes</classifier>
 		</dependency>
 		
@@ -39,7 +39,7 @@
 			<!-- process engine, needs to be provided -->
 			<groupId>com.finture.bpm</groupId>
 			<artifactId>flowee-bpms-engine</artifactId>
-			<version>0.7.2-SNAPSHOT</version>
+			<version>0.7.2</version>
 		</dependency>
 
 		<dependency>
